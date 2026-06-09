@@ -344,10 +344,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        if (floorSelect) {
-            floorSelect.addEventListener('change', calculateEstimate);
-        }
-
         const calculateEstimate = () => {
             const area = areaInput ? parseInt(areaInput.value, 10) : 30;
             const floorType = floorSelect ? floorSelect.value : 'eiche';
@@ -393,6 +389,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         };
+
+        if (floorSelect) {
+            floorSelect.addEventListener('change', calculateEstimate);
+        }
 
         const updateStepView = () => {
             // Hide all steps, show current
