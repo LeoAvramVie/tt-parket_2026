@@ -183,17 +183,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 overlayTitle.textContent = `${woodInfo.title}`;
                 overlayDesc.textContent = `${patternName} – ${woodInfo.desc}`;
                 
-                // Set mock floor preview image. In real production, this would point to pre-rendered textures.
-                // We construct a descriptive placeholder using high-quality images from Unsplash representing parquet.
-                // We use standard parquet-like Unsplash IDs that correspond to light/dark oak wood textures.
-                let imgUrl = "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80"; // default Eiche
+                // Set real floor preview image from local authentic project photos.
+                let imgUrl = "images/fischgraeten1.jpeg"; // default Eiche
                 
                 if (activeWood === 'nussbaum') {
-                    imgUrl = "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=800&q=80"; // dark wood
+                    imgUrl = "images/meetingraum.jpeg"; // dark walnut wood
                 } else if (activeWood === 'ahorn') {
-                    imgUrl = "https://images.unsplash.com/photo-1615876234886-fd9a39fda97f?auto=format&fit=crop&w=800&q=80"; // light modern floor
+                    imgUrl = "images/fischgraeten3.jpeg"; // light wood/maple
                 } else if (activeWood === 'buche') {
-                    imgUrl = "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80"; // warm reddish wood
+                    imgUrl = "images/versiegelung3.jpeg"; // warm reddish/beech wood
                 }
                 
                 previewImg.src = imgUrl;
