@@ -364,8 +364,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 minPricePerSqm = 24; maxPricePerSqm = 38; // sanding
             } else if (selectedService === 'versiegeln') {
                 minPricePerSqm = 12; maxPricePerSqm = 20; // sealing
-            } else if (selectedService === 'beratung') {
-                minPricePerSqm = 0; maxPricePerSqm = 0; // free consultation
             }
 
             const minTotal = minPricePerSqm * area;
@@ -380,11 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             if (summaryPrice) {
-                if (selectedService === 'beratung') {
-                    summaryPrice.textContent = 'Kostenlos';
-                } else {
-                    summaryPrice.textContent = `€${minTotal.toLocaleString('de-AT')} - €${maxTotal.toLocaleString('de-AT')}`;
-                }
+                summaryPrice.textContent = `€${minTotal.toLocaleString('de-AT')} - €${maxTotal.toLocaleString('de-AT')}`;
             }
         };
 
@@ -483,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                  `- E-Mail: ${email}\n` +
                                  `- Telefon: ${phone}\n\n` +
                                  `Zusätzliche Nachricht:\n${message}\n\n` +
-                                 `Bitte setzen Sie sich zwecks einer kostenlosen und verbindlichen Beratung mit mir in Verbindung.\n\n` +
+                                 `Bitte setzen Sie sich zwecks eines unverbindlichen Angebots mit mir in Verbindung.\n\n` +
                                  `Mit freundlichen Grüßen,\n${name}`;
 
                 const mailtoUrl = `mailto:${recipient}?subject=${subject}&body=${encodeURIComponent(bodyText)}`;

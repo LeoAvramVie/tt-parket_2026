@@ -562,7 +562,7 @@ button, input, textarea, select {
 
 @media (min-width: 1200px) {
     .services-grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -1129,6 +1129,12 @@ button, input, textarea, select {
 @media (min-width: 576px) {
     .calc-grid {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .calc-grid {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
