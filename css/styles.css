@@ -16,7 +16,7 @@
     --color-border: #E5DFD5;
     --color-error: #B23B3B;
     --color-success: #3D7A5A;
-    
+
     /* Glassmorphism */
     --glass-bg: rgba(250, 248, 245, 0.85);
     --glass-border: rgba(229, 223, 213, 0.4);
@@ -57,7 +57,9 @@
 /* ==========================================================================
    BASE STYLES
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -78,7 +80,12 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 400;
     line-height: 1.2;
@@ -97,7 +104,10 @@ img {
     display: block;
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
@@ -110,13 +120,16 @@ button, input, textarea, select {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: var(--color-bg);
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--color-border);
     border-radius: var(--radius-full);
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-accent);
 }
@@ -338,11 +351,11 @@ button, input, textarea, select {
         font-weight: 500;
         font-size: 0.9rem;
     }
-    
+
     .nav-contact-btn:hover {
         color: var(--color-accent);
     }
-    
+
     .menu-toggle {
         display: none;
     }
@@ -428,22 +441,29 @@ button, input, textarea, select {
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 2.25rem;
     font-weight: 300;
-    line-height: 1.1;
+    line-height: 1.15;
     margin-bottom: var(--space-md);
     text-transform: uppercase;
+
 }
 
 @media (min-width: 768px) {
     .hero-title {
-        font-size: 4rem;
+        font-size: 3.25rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero-title {
+        font-size: 2.75rem;
     }
 }
 
 @media (min-width: 1200px) {
     .hero-title {
-        font-size: 4.5rem;
+        font-size: 3.75rem;
     }
 }
 
@@ -683,20 +703,23 @@ button, input, textarea, select {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%; /* JS will change this */
+    width: 50%;
+    /* JS will change this */
     height: 100%;
     overflow: hidden;
 }
 
 .slider-img-after-container .slider-img {
-    width: 800px; /* Must match container parent width, JS handles resize */
+    width: 800px;
+    /* Must match container parent width, JS handles resize */
 }
 
 .slider-handle {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50%; /* JS will change this */
+    left: 50%;
+    /* JS will change this */
     width: 2px;
     background-color: var(--color-surface);
     cursor: ew-resize;
@@ -704,7 +727,7 @@ button, input, textarea, select {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .slider-handle-button {
@@ -867,7 +890,8 @@ button, input, textarea, select {
     transition: all var(--transition-fast);
 }
 
-.gallery-filter:hover, .gallery-filter.active {
+.gallery-filter:hover,
+.gallery-filter.active {
     color: var(--color-accent);
     border-bottom-color: var(--color-accent);
 }
@@ -897,7 +921,8 @@ button, input, textarea, select {
     background-color: var(--color-surface);
     cursor: pointer;
     transition: transform var(--transition-fast);
-    display: block; /* For dynamic filters */
+    display: block;
+    /* For dynamic filters */
 }
 
 .gallery-item.hide {
@@ -1076,7 +1101,8 @@ button, input, textarea, select {
     position: absolute;
     top: 15px;
     left: 0;
-    width: 0%; /* JS will dynamically change this */
+    width: 0%;
+    /* JS will dynamically change this */
     height: 2px;
     background-color: var(--color-accent);
     z-index: 2;
@@ -1329,7 +1355,8 @@ button, input, textarea, select {
     margin-bottom: var(--space-xxs);
 }
 
-.contact-info-content p, .contact-info-content a {
+.contact-info-content p,
+.contact-info-content a {
     font-size: 1.05rem;
 }
 
@@ -1473,7 +1500,8 @@ textarea.form-input {
     max-width: 320px;
 }
 
-.footer-links h3, .footer-contact h3 {
+.footer-links h3,
+.footer-contact h3 {
     color: var(--color-bg);
     font-size: 1rem;
     font-weight: 600;
@@ -1542,6 +1570,7 @@ textarea.form-input {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
