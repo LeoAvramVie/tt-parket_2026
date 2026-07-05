@@ -275,11 +275,8 @@ select {
 }
 
 .logo img {
-    height: 36px;
-    width: 36px;
-    border-radius: var(--radius-sm);
-    object-fit: cover;
-    border: 1px solid rgba(212, 175, 55, 0.25);
+    height: 48px;
+    width: auto;
 }
 
 .logo-accent {
@@ -987,6 +984,7 @@ select {
 }
 
 .gallery-caption {
+    display: none;
     padding: var(--space-sm) var(--space-xs) var(--space-xxs) var(--space-xs);
 }
 
@@ -1482,11 +1480,8 @@ textarea.form-input {
 }
 
 .footer-brand-logo img {
-    height: 36px;
-    width: 36px;
-    border-radius: var(--radius-sm);
-    object-fit: cover;
-    border: 1px solid rgba(212, 175, 55, 0.25);
+    height: 48px;
+    width: auto;
 }
 
 .footer-brand h2 {
